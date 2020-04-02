@@ -149,8 +149,8 @@ function nepInfectData() {
                     <td class="table-warning p-3">${json.tested_total}</td>
                     </tr> 
                      <tr>
-                    <td class="table-secondary p-25">In Isolation</td>
-                    <td class="table-secondary p-25">${json.in_isolation}</td>
+                    <td class="table-secondary p-3">In Isolation</td>
+                    <td class="table-secondary p-3">${json.in_isolation}</td>
                     </tr> 
                      <tr>
                     <td class="table-danger p-3">Deaths</td>
@@ -189,36 +189,36 @@ function worldInfectData() {
                    
                      <table border=1 class="text-center table table-sm font-weight-bold">
                     <tr>
-                    <td class="table-dark p-25">${country}</td>
-                    <td class="table-dark p-25">${element.country}</td>
+                    <td class="table-dark p-3">${country}</td>
+                    <td class="table-dark p-3">${element.country}</td>
                     </tr>
                     <tr>
-                    <td class="table-success p-25">Total cases</td>
-                    <td class="table-success p-25">${element.totalCases}</td>
+                    <td class="table-success p-3">Total cases</td>
+                    <td class="table-success p-3">${element.totalCases}</td>
                     </tr>
                      <tr>
-                    <td class="table-warning p-25">New cases</td>
-                    <td class="table-warning p-25">${element.newCases}</td>
+                    <td class="table-warning p-3">New cases</td>
+                    <td class="table-warning p-3">${element.newCases}</td>
                     </tr> 
                     <tr>
-                    <td class="table-primary p-25">Total Deaths</td>
-                    <td class="table-primary p-25">${element.totalDeaths}</td>
+                    <td class="table-primary p-3">Total Deaths</td>
+                    <td class="table-primary p-3">${element.totalDeaths}</td>
                     </tr> 
                     <tr>
-                    <td class="table-secondary p-25">New Deaths</td>
-                    <td class="table-secondary p-25">${element.newDeaths}</td>
+                    <td class="table-secondary p-3">New Deaths</td>
+                    <td class="table-secondary p-3">${element.newDeaths}</td>
                     </tr> 
                     <tr>
-                    <td class="table-light p-25">Active cases</td>
-                    <td class="table-light p-25">${element.activeCases}</td>
+                    <td class="table-light p-3">Active cases</td>
+                    <td class="table-light p-3">${element.activeCases}</td>
                     </tr> 
                     <tr>
-                    <td class="table-warning p-25">Total recovered</td>
-                    <td class="table-warning p-25">${element.totalRecovered}</td>
+                    <td class="table-warning p-3">Total recovered</td>
+                    <td class="table-warning p-3">${element.totalRecovered}</td>
                     </tr> 
                     <tr>
-                    <td class="table-danger p-25">Critical cases</td>
-                    <td class="table-danger p-25">${element.criticalCases}</td>
+                    <td class="table-danger p-3">Critical cases</td>
+                    <td class="table-danger p-3">${element.criticalCases}</td>
                     </tr> 
                     </table> 
                     
@@ -335,24 +335,24 @@ function allNepInfectData() {
                 let news = `
                       <table border=1 class="text-center table table-sm font-weight-bold">
                     <tr>
-                    <td class="table-danger p-25">Date</td>
-                    <td class="table-danger p-25">${element.date}</td>
+                    <td class="table-danger p-3">Date</td>
+                    <td class="table-danger p-3">${element.date}</td>
                     </tr>
                     <tr>
-                    <td class="table-success p-25">Country</td>
-                    <td class="table-success p-25">${element.country}</td>
+                    <td class="table-success p-3">Country</td>
+                    <td class="table-success p-3">${element.country}</td>
                     </tr>
                      <tr>
-                    <td class="table-warning p-25">Total cases</td>
-                    <td class="table-warning p-25">${element.totalCases}</td>
+                    <td class="table-warning p-3">Total cases</td>
+                    <td class="table-warning p-3">${element.totalCases}</td>
                     </tr> 
                     <tr>
-                    <td class="table-primary p-25">Deaths</td>
-                    <td class="table-primary p-25">${element.deaths}</td>
+                    <td class="table-primary p-3">Deaths</td>
+                    <td class="table-primary p-3">${element.deaths}</td>
                     </tr> 
                     <tr>
-                    <td class="table-secondary p-25">Source</td>
-                    <td class="table-secondary p-25"><a href="${element.source_url}">${element.source}</a></td>
+                    <td class="table-secondary p-3">Source</td>
+                    <td class="table-secondary p-3"><a href="${element.source_url}">${element.source}</a></td>
                     </tr> 
                    
                     </table> 
