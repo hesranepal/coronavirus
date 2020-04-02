@@ -148,6 +148,14 @@ function nepInfectData() {
                     <td class="table-warning p-3">Tested total</td>
                     <td class="table-warning p-3">${json.tested_total}</td>
                     </tr> 
+                     <tr>
+                    <td class="table-secondary p-25">In Isolation</td>
+                    <td class="table-secondary p-25">${json.in_isolation}</td>
+                    </tr> 
+                     <tr>
+                    <td class="table-danger p-3">Deaths</td>
+                    <td class="table-danger p-3">${json.deaths}</td>
+                    </tr>
                     </table> 
 
                    <p class="text-center"> <a href="${json.source}" target="_blank">Read full information here</a><p>
