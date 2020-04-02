@@ -272,7 +272,7 @@ function getMyths() {
 }
 
 function faqs() {
-    document.getElementById('pageTitle').innerHTML = "CoronaVirus Myths";
+    document.getElementById('pageTitle').innerHTML = "FAQs about COVID-19";
 
     const xhr = new XMLHttpRequest();
     xhr.open('GET', `https://nepalcorona.info/api/v1/faqs`, true);
