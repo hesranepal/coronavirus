@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"> -->
+    <title>Welcome to NepNewz</title>
+    <style type="text/css">
+        .corona_rot img {
+            animation: gocorona 3s linear infinite;
+        }
+
+        @keyframes gocorona {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        i:hover {
+            color: tomato;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <h4 class="text-primary" style="letter-spacing: 4px;">COR<span class="corona_rot"><img src="images/icon.png"
+                        alt=""></span>NA UPDATES</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ml-5">
+                <li class="nav-item active">
+                    <a class="nav-link " href="#" onclick="getNews()">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://windy.app/coronavirus_map">Live Map</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link symptom" href="javascript:void(0);">Symptoms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link prevent" href="javascript:void(0);">Prevention</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#" onclick="getReport()">WHO and MOHP Situation Reports</a>
+                        <a class="dropdown-item" href="#" onclick="nepInfectData()">Nepal Infection Data</a>
+
+                        <a class="dropdown-item" href="#" onclick="worldInfectData()">World Infection Data</a>
+                        <a class="dropdown-item" href="#" onclick="getNews()">Coronavirus Related News</a>
+                        <a class="dropdown-item" href="#" onclick="getMyths()">Coronavirus Myths</a>
+                        <a class="dropdown-item" href="#" onclick="faqs()">FAQS</a>
+                        <a class="dropdown-item" href="#" onclick="allNepInfectData()">All Nepali Infection Data</a>
+                        <a class="dropdown-item" href="#" onclick="listHospitals()">Hospitals List</a>
+
+                    </div>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input id="searchTxt" class="form-control mr-sm-2" type="search" placeholder="Search"
+                    aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container my-3">
+        <div class="d-flex justify-content-between justify-content-center">
+        <div class="my-3">
+            <h3><img src="images/hesralogo.jpg" alt="HeSRA logo" width="75" height="75">
+                <span>HeSRA Nepal</span></h3>
+        </div>
+        <div class="mr-3 my-3">
+            <a href="https://esewa.com.np/#/home" target="_blank"> <button type="button" class="btn btn-outline-success waves-effect btn-lg">Donate</button></a>
+             <p style="font-weight: 600;" class="text-center">Esewa ID: (9842866888)</p>
+        </div>
+    </div>
+        <hr>
+        <h3 id="pageTitle"></h3>
+        <div class="accordion" id="newsAccordian">
+
+
+        </div>
+    </div>
+    <footer>
+        <!-- Footer -->
+        <footer class="page-footer font-small unique-color-dark my-5">
+
+            <div style="background-color: #6351ce;">
+                <div class="container">
+
+                    <!-- Grid row-->
+                    <div class="row py-4 d-flex align-items-center">
+
+                        <!-- Grid column -->
+                        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                            <h6 class="mb-0">Get connected with us on social networks!</h6>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                            <!-- Facebook -->
+                            <a class="fb-ic" href="https://www.facebook.com/hesra.nepal">
+                                <i class="fa fa-facebook-square mr-3 " style="font-size: 30px;"></i>
+                            </a>
+                            <!-- Twitter -->
+                            <a class="tw-ic" href="#">
+                                <i class="fa fa-twitter mr-3" style="font-size: 30px;"></i>
+                            </a>
+
+                            <!--Linkedin -->
+                            <a class="li-ic" href="#">
+                                <i class="fa fa-linkedin mr-3" style="font-size: 30px;"></i>
+                            </a>
+                            <!--Instagram-->
+                            <a class="ins-ic" href="https://www.instagram.com/hesranepal/">
+                                <i class="fa fa-instagram mr-3" style="font-size: 30px;"></i>
+                            </a>
+
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row-->
+
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left mt-5">
+
+                <!-- Grid row -->
+                <div class="row mt-3">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                        <!-- Content -->
+                        <img src="images/hesralogo.jpg" alt="HeSRA logo" width="75" height="75">
+                        <h6 class="text-uppercase font-weight-bold text-center my-1">Health Service and Relief
+                            Association(HeSRA)</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>HeSRA (Health Services and Relief Association) Nepal is a relief
+                            and humanitarian based organization, established in 1994 A.D.
+                            It is one of a true social welfare organizations in Nepal with dedicated social workers and
+                            volunteers with vast outreach in Himalayan land.</p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    </div>
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <a href="javascript:void(0)" onclick="getReport()">WHO and MOHP Situation Report</a>
+                        </p>
+                        <p>
+                            <a href="javascript:void(0)" onclick="getNews()">Corona virus related News</a>
+                        </p>
+                        <p>
+                            <a href="javascript:void(0)" onclick="nepInfectData()">Nepal Infection Data</a>
+                        </p>
+                        <p>
+                            <a href="javascript:void(0)" onclick="worldInfectData()">World Infection Data</a>
+                        </p>
+                        <p>
+                            <a href="javascript:void(0)" onclick="allNepInfectData()">All Nepali Infection Data</a>
+                        </p>
+                        <p>
+                            <a href="javascript:void(0)" onclick="getMyths()">CoronaVirus Myths</a>
+                        </p>
+                        <p>
+                            <a href="javascript:void(0)" onclick="faqs()">FAQs</a>
+                        </p>
+                        <p>
+                            <a href="javascript:void(0)" onclick="listHospitals()">Hospitals List</a>
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <i class="fa fa-address-card-o"></i> Bagbazar,Kathmandu, Nepal</p>
+                        <p>
+                            <i class="fa fa-envelope-o"></i> hesranepal@gmail.com</p>
+                        <p>
+                            <i class="fa fa-phone"></i> 01-4245357 </p>
+                        <p>
+                            <i class="fa fa-mobile"></i> 977-9842866888</p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Links -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3 d-flex justify-content-between">
+                <div class="ml-5">
+                    Developed with <i class="fa fa-heart" style="color: red;"></i> by <a
+                        href="https://www.instagram.com/mdaalam22">Md M Aalam</a>
+                </div>
+                <div class="mr-5">
+                    © 2020 Copyright:
+                    <a href="#"> hesranepal</a>
+                </div>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- <script src="index.js"></script> -->
+    <script src="index.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.symptom').click(function () {
+                $('#newsAccordian').load('symptoms.html');
+            });
+
+            $('.prevent').click(function () {
+                $('#newsAccordian').load('prevention.html');
+            });
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
