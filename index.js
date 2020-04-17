@@ -101,7 +101,7 @@ function getReport() {
                             <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse${index}"
                             aria-expanded="true" aria-controls="collapse${index}">
-                                   <span class="text-white bg-danger mr-2 "><b>Date: ${element.date}</b> </span>  <span class="ml-30"> info by :${element["type"]}
+                                   <span class="text-white bg-danger mr-2 "><b>Date: ${element.date_np}</b> </span>  <span class="ml-30"> info by :${element["type"]}
                                </span></button>
                             </h2>
                         </div>
